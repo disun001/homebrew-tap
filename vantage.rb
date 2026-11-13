@@ -5,23 +5,23 @@
 class Vantage < Formula
   desc "Save, restore and browse tmux workspaces, with an ssh-aware sidebar"
   homepage "https://github.com/disun001/vantage"
-  version "0.3.0"
+  version "0.4.0"
   license "MIT"
 
   depends_on "tmux"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/disun001/vantage/releases/download/v0.3.0/vantage_0.3.0_darwin_amd64.tar.gz"
-      sha256 "720c33aa238beec59ad73dd684ba8f3d6bdb13198675df980bc021faea065424"
+      url "https://github.com/disun001/vantage/releases/download/v0.4.0/vantage_0.4.0_darwin_amd64.tar.gz"
+      sha256 "163cb46ff660e0d975ca673fb2fabeffe17a225ebb918ac19a9a6351a5349f06"
 
       define_method(:install) do
         bin.install "vantage"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/disun001/vantage/releases/download/v0.3.0/vantage_0.3.0_darwin_arm64.tar.gz"
-      sha256 "5d04ebdf4b76034a453ef45f79240a1866419973457f977542e9279f5e3bd7f8"
+      url "https://github.com/disun001/vantage/releases/download/v0.4.0/vantage_0.4.0_darwin_arm64.tar.gz"
+      sha256 "262a7713bf66dca32958e4caf501b2ad73c7fcdedf7e3b55c84d61c3923d077f"
 
       define_method(:install) do
         bin.install "vantage"
@@ -31,15 +31,15 @@ class Vantage < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/disun001/vantage/releases/download/v0.3.0/vantage_0.3.0_linux_amd64.tar.gz"
-      sha256 "889e780b89baee9710f36e8825d350df22c1315f54b8454c5fc414e71b08a70c"
+      url "https://github.com/disun001/vantage/releases/download/v0.4.0/vantage_0.4.0_linux_amd64.tar.gz"
+      sha256 "6b1f1075dbb2ed38ecad3f70a80a509fbf011cb8fc4f57fab64657da196b0f90"
       define_method(:install) do
         bin.install "vantage"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/disun001/vantage/releases/download/v0.3.0/vantage_0.3.0_linux_arm64.tar.gz"
-      sha256 "3cbfffd9fca0ed28ca145cf83ead1debde391eea03df32902a7e3d096dbda3c1"
+      url "https://github.com/disun001/vantage/releases/download/v0.4.0/vantage_0.4.0_linux_arm64.tar.gz"
+      sha256 "09b3b05545e33829f3f5c5168290b18a57ab8a48f0e6cfcfbfe097bd9533dfd0"
       define_method(:install) do
         bin.install "vantage"
       end
